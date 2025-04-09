@@ -1,0 +1,56 @@
+{% comment %} {% extends 'base.html' %} {% endcomment %}
+
+{% block content %}
+
+<style>
+    form{
+        width: 50%;
+        margin: 0 auto;
+    }
+    form{
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    form label{
+        display: block;
+        margin-bottom: 10px;
+    }
+    form input, form textarea{
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    form button[type=submit]{
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    form button[type=submit]:hover {
+        background-color: #45a049;
+    }
+</style>
+<h1 class="text-center display-3">creer un produit</h1>
+
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="name"></label>
+    <input type="text" name="name" id="name">
+    <label for="price"></label>
+    <input type="number" name="price" id="price">
+    <label for="description"></label>
+    <input type="text" name="description" id="description">
+    <label for="image"></label>
+    <input type="file" name="image" id="image">
+    <input type="submit" value="creer">
+</form>
+
+{% endblock %}
+
+

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Document</title>
+    <style>
+        /* Style du footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer h4 {
+    margin-bottom: 20px;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.footer p {
+    font-size: 1em;
+    color: #bbb;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Section gauche (à propos) */
+.footer-left {
+    flex: 1;
+    max-width: 300px;
+}
+
+.footer-left p {
+    font-size: 0.9em;
+    color: #bbb;
+}
+
+/* Section centre (liens rapides) */
+.footer-center {
+    flex: 1;
+    max-width: 300px;
+}
+
+.footer-center ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-center li {
+    margin: 10px 0;
+}
+
+/* Section droite (réseaux sociaux) */
+.footer-right {
+    flex: 1;
+    max-width: 300px;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links .social-icon {
+    background-color: #555;
+    padding: 10px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.5em;
+    transition: background-color 0.3s ease;
+}
+
+.social-links .social-icon:hover {
+    background-color: #00aaff;
+}
+
+/* Section bas (newsletter) */
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.newsletter {
+    margin-bottom: 20px;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    width: 250px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #00aaff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+    background-color: #0088cc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+    </style>
+</head>
+<body>
+<!-- footer.html -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-left">
+                <h4>À propos</h4>
+                <p>Nous sommes une entreprise dédiée à l'innovation et à la création de solutions numériques de qualité.</p>
+            </div>
+
+            <div class="footer-center">
+                <h4>Liens rapides</h4>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-right">
+                <h4>Suivez-nous</h4>
+                <div class="social-links">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="newsletter">
+                <h4>Abonnez-vous à notre newsletter</h4>
+                <form action="#" method="POST">
+                    <input type="email" placeholder="Votre email" required>
+                    <button type="submit">S'abonner</button>
+                </form>
+            </div>
+            <p>&copy; {{ current_year }} Mon Site Web. Tous droits réservés.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

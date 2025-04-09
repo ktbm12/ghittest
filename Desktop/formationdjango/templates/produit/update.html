@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <div class="card shadow rounded p-4">
+        <h2 class="mb-4 text-center text-primary">Modifier le produit</h2>
+        
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <div class="mb-3">
+                <label for="name" class="form-label fw-bold">Nom du produit</label>
+                <input type="text" class="form-control" name="name" value="{{ produit.name }}" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="price" class="form-label fw-bold">Prix (€)</label>
+                <input type="number" step="0.01" class="form-control" name="price" value="{{ produit.price }}" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="description" class="form-label fw-bold">Description</label>
+                <textarea class="form-control" name="description" rows="4" required>{{ produit.description }}</textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="image" class="form-label fw-bold">Nouvelle image</label>
+                <input type="file" class="form-control" name="image">
+            </div>
+
+            {% if produit.image %}
+                <div class="mb-4">
+                    <label class="form-label fw-bold">Image actuelle :</label><br>
+                    <img src="{{ produit.image.url }}" alt="Image du produit" class="img-thumbnail" style="max-width: 200px;">
+                </div>
+            {% endif %}
+
+            <div class="d-grid">
+                <button type="submit" class="btn btn-success btn-lg">💾 Enregistrer les modifications</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
